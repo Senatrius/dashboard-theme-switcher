@@ -11,11 +11,11 @@ body {
 .header {
   display: flex;
   flex-direction: column;
-  margin: 35px auto 32px auto;
+  margin: 2.2rem auto 2rem auto;
 
   &__title {
-    font-size: 24px;
-    margin-bottom: 6px;
+    font-size: 1.5rem;
+    margin-bottom: .4rem;
   }
 
   &__switch {
@@ -56,24 +56,65 @@ body {
 
   &__followers {
     display: grid;
-    grid-row-gap: 22px;
-    grid-column-gap: 26px;
+    grid-row-gap: 1.375rem;
+    grid-column-gap: 1.625rem;
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
     grid-template-rows: auto;
   }
 
   &__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-1);
-    margin: 46px auto 26px auto;
+    margin: 2.8rem auto 1.625rem auto;
   }
 
   &__overview {
     display: grid;
     grid-row-gap: 15px;
-    grid-column-gap: 26px;
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-column-gap: 1.625rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     grid-template-rows: auto;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .header {
+    margin: 2.375rem auto 2.2rem auto;
+  
+    &__title {
+      font-size: 1.875rem;
+      margin-bottom: .4rem;
+    }
+  }
+
+  .social {
+    margin-bottom: 2.8rem;
+
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 2.875rem auto 1.625rem auto;
+    }
+    &__overview {
+      grid-row-gap: 1.375rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.2rem auto 2.75rem auto;
+
+    &__theme {
+      margin-right: 1rem;
+    }
+  }
+
+  .social {
+    margin-bottom: 4rem;
   }
 }

@@ -10,7 +10,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 236px;
+  height: 14.75rem;
   border-radius: 0 0 20px 20px;
   background: var(--top-bg);
   z-index: -1;
@@ -19,12 +19,12 @@
 .line {
   width: 100%;
   height: 2px;
-  margin: 20px auto;
+  margin: 1.25rem auto;
   background: var(--toggle-bg);
 }
 
 .subtitle-text {
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: 700;
   color: var(--text-1);
 }
@@ -32,6 +32,7 @@
 .social-icon {
   width: 17px;
   height: 17px;
+  margin-right: 7px;
 }
 
 .follower-card {
@@ -39,7 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 26px;
+  padding: 1.625rem;
   border-radius: 3px;
   background: var(--card-bg);
   cursor: pointer;
@@ -66,27 +67,32 @@
     border-top: 4px solid var(--youtube);
   }
 
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
   &__total {
-    margin: 16px auto 20px auto;
+    margin: 1rem auto 1.25rem auto;
     text-align: center;
   }
 
   &__count {
-    font-size: 52px;
+    font-size: 3.25rem;
     font-weight: 700;
     color: var(--text-2);
   }
 
   &__desc {
-    font-size: 12px;
-    letter-spacing: 4px;
+    font-size: .75rem;
+    letter-spacing: .25rem;
     color: var(--text-1);
   }
 }
 
 .overview-card {
   width: 100%;
-  padding: 22px 27px 22px 22px;
+  padding: 1.375rem 1.625rem 1.375rem 1.375rem;
   display: flex;
   flex-direction: column;
   background: var(--card-bg);
@@ -101,7 +107,11 @@
     justify-content: space-between;
     display: flex;
     align-items: center;
-    margin-bottom: 26px;
+    margin-bottom: 1.625rem;
+
+    .social-icon {
+      margin-right: 0;
+    }
   }
 
   &__count {
@@ -111,7 +121,7 @@
   }
 
   &__total {
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 700;
   }
 }
@@ -121,7 +131,7 @@
     display: flex;
     align-items: center;
     color: var(--lime-green);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 700;
   }
 
@@ -129,11 +139,21 @@
     display: flex;
     align-items: center;
     color: var(--bright-red);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 700;
   }
 
   &__icon {
     margin-right: 3px;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .top-pattern {
+    height: 15.25rem;
+  }
+
+  .line {
+    display: none;
   }
 }
