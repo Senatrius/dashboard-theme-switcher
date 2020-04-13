@@ -1,0 +1,139 @@
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked + .header__switch-ball{
+  transform: translateX(-23px);
+}
+
+.top-pattern {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 236px;
+  border-radius: 0 0 20px 20px;
+  background: var(--top-bg);
+  z-index: -1;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  margin: 20px auto;
+  background: var(--toggle-bg);
+}
+
+.subtitle-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.social-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.follower-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 26px;
+  border-radius: 3px;
+  background: var(--card-bg);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--card-hover);
+  }
+
+  &--fb {
+    border-top: 4px solid var(--facebook);
+  }
+
+  &--twitter {
+    border-top: 4px solid var(--twitter);
+  }
+
+  &--insta {
+    border-style: solid;
+    border-width: 4px 0 0 0;
+    border-image: var(--instagram) 10;
+  }
+
+  &--yt {
+    border-top: 4px solid var(--youtube);
+  }
+
+  &__total {
+    margin: 16px auto 20px auto;
+    text-align: center;
+  }
+
+  &__count {
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--text-2);
+  }
+
+  &__desc {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--text-1);
+  }
+}
+
+.overview-card {
+  width: 100%;
+  padding: 22px 27px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--card-hover);
+  }
+
+  &__info {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  &__count {
+    justify-content: space-between;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__total {
+    font-size: 26px;
+    font-weight: 700;
+  }
+}
+
+.trend {
+  &--up {
+    display: flex;
+    align-items: center;
+    color: var(--lime-green);
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &--down {
+    display: flex;
+    align-items: center;
+    color: var(--bright-red);
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__icon {
+    margin-right: 3px;
+  }
+}

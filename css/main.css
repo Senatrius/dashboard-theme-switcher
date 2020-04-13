@@ -10,7 +10,303 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Primary Colors */
-/* Social Icon Colors */
-/* Themes */
+:root {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(195, 100%, 50%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+}
+
+html[data-theme="light"] {
+  --toggle-bg: hsl(230, 22%, 74%);
+  --bg: hsl(0, 0%, 100%);
+  --top-bg: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --text-1: hsl(228, 12%, 44%);
+  --text-2: hsl(230, 17%, 14%);
+  --card-hover: hsl(227, 47%, 91%);
+  --toggle-hover: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+html[data-theme="dark"] {
+  --toggle-bg: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --bg: hsl(230, 17%, 14%);
+  --top-bg: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --text-1: hsl(228, 34%, 66%);
+  --text-2: hsl(0, 0%, 100%);
+  --card-hover: hsl(228, 28%, 25%)
+;
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked + .header__switch-ball {
+  -webkit-transform: translateX(-23px);
+          transform: translateX(-23px);
+}
+
+.top-pattern {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 236px;
+  border-radius: 0 0 20px 20px;
+  background: var(--top-bg);
+  z-index: -1;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  margin: 20px auto;
+  background: var(--toggle-bg);
+}
+
+.subtitle-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.social-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.follower-card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 26px;
+  border-radius: 3px;
+  background: var(--card-bg);
+  cursor: pointer;
+}
+
+.follower-card:hover {
+  background: var(--card-hover);
+}
+
+.follower-card--fb {
+  border-top: 4px solid var(--facebook);
+}
+
+.follower-card--twitter {
+  border-top: 4px solid var(--twitter);
+}
+
+.follower-card--insta {
+  border-style: solid;
+  border-width: 4px 0 0 0;
+  -o-border-image: var(--instagram) 10;
+     border-image: var(--instagram) 10;
+}
+
+.follower-card--yt {
+  border-top: 4px solid var(--youtube);
+}
+
+.follower-card__total {
+  margin: 16px auto 20px auto;
+  text-align: center;
+}
+
+.follower-card__count {
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--text-2);
+}
+
+.follower-card__desc {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--text-1);
+}
+
+.overview-card {
+  width: 100%;
+  padding: 22px 27px 22px 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: var(--card-bg);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.overview-card:hover {
+  background: var(--card-hover);
+}
+
+.overview-card__info {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 26px;
+}
+
+.overview-card__count {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.overview-card__total {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.trend--up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--lime-green);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.trend--down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--bright-red);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.trend__icon {
+  margin-right: 3px;
+}
+
+body {
+  background: var(--bg);
+}
+
+.wrapper {
+  width: 86%;
+  margin: 0 auto;
+  max-width: 1110px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 35px auto 32px auto;
+}
+
+.header__title {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.header__switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__switch-bg {
+  display: block;
+  position: relative;
+  width: 47px;
+  height: 24px;
+  background: var(--toggle-bg);
+  border-radius: 100px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.header__switch-bg:hover {
+  background: var(--toggle-hover);
+}
+
+.header__switch-ball {
+  position: absolute;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  background: var(--bg);
+  border-radius: 50%;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+.social {
+  margin-bottom: 45px;
+}
+
+.social__followers {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 22px;
+  grid-column-gap: 26px;
+  -ms-grid-columns: (minmax(225px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.social__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-1);
+  margin: 46px auto 26px auto;
+}
+
+.social__overview {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 15px;
+  grid-column-gap: 26px;
+  -ms-grid-columns: (minmax(225px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
 /*# sourceMappingURL=main.css.map */
