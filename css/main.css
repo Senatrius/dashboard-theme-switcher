@@ -37,8 +37,8 @@ html[data-theme="dark"] {
   --card-bg: hsl(228, 28%, 20%);
   --text-1: hsl(228, 34%, 66%);
   --text-2: hsl(0, 0%, 100%);
-  --card-hover: hsl(228, 28%, 25%)
-;
+  --card-hover: hsl(228, 28%, 25%);
+  --toggle-hover: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
 #checkbox {
@@ -197,6 +197,7 @@ html[data-theme="dark"] {
 .overview-card__total {
   font-size: 1.625rem;
   font-weight: 700;
+  color: var(--text-2);
 }
 
 .trend--up {
@@ -260,6 +261,7 @@ body {
 .header__title {
   font-size: 1.5rem;
   margin-bottom: .4rem;
+  color: var(--text-2);
 }
 
 .header__switch {

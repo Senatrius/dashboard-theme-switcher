@@ -31,5 +31,6 @@ html[data-theme="dark"] {
   --text-1: hsl(228, 34%, 66%);
   --text-2: hsl(0, 0%, 100%);
 
-  --card-hover: hsl(228, 28%, 25%)
+  --card-hover: hsl(228, 28%, 25%);
+  --toggle-hover: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
